@@ -68,11 +68,11 @@ public class Main {
             String choose = sc.nextLine();
             switch (choose) {
                 case "1" -> {
-                    ChocolateSale(medicaments);
+                    MedicamentSale(medicaments);
                     Menu(medicaments);
                 }
                 case "2" -> {
-                    ReplenishChocolate(medicaments);
+                    ReplenishMedicament(medicaments);
                     Menu(medicaments);
                 }
                 case "3" -> {
@@ -80,7 +80,7 @@ public class Main {
                     Menu(medicaments);
                 }
                 case "4" -> {
-                    TheChocolateInformation(medicaments);
+                    TheMedicamentInformation(medicaments);
                     Menu(medicaments);
                 }
                 case "5" -> {
@@ -156,7 +156,7 @@ public class Main {
 
     }
 
-    private static void TheChocolateInformation(ArrayList<Pharmacy> medicaments) {
+    private static void TheMedicamentInformation(ArrayList<Pharmacy> medicaments) {
         System.out.println("Выберите название лекарства для получения информации:");
         for (Pharmacy medicament : medicaments) {
             System.out.println(medicament.getName());
@@ -211,7 +211,7 @@ public class Main {
         }
     }
 
-    private static void ReplenishChocolate(ArrayList<Pharmacy> medicaments) {
+    private static void ReplenishMedicament(ArrayList<Pharmacy> medicaments) {
         System.out.println("Выберите название препарата для пополнения запаса:");
         for (Pharmacy pharmacy : medicaments) {
             System.out.println(pharmacy.getName());
@@ -245,7 +245,7 @@ public class Main {
         }
     }
 
-    private static void ChocolateSale(ArrayList<Pharmacy> medicaments) {
+    private static void MedicamentSale(ArrayList<Pharmacy> medicaments) {
         System.out.println("Выберите название препарата для продажи: ");
         for (Pharmacy pharmacy : medicaments) {
             System.out.println(pharmacy.getName());
